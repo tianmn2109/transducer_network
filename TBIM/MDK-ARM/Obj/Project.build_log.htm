@@ -1,0 +1,113 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\毕设\工程\问题4助教\问题4识别过程完成\实验(uCOSII2.91)\MDK-ARM\Project.uvproj
+Project File Date:  06/19/2014
+
+<h2>Output:</h2>
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(50): warning:  #186-D: pointless comparison of unsigned integer with zero
+                for(k=i;k>=0;k--)
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(222): warning:  #111-D: statement is unreachable
+        get_epoch();
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(172): warning:  #550-D: variable "averageTime" was set but never used
+        u16t averageTime;
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(321): warning:  #550-D: variable "averageTime" was set but never used
+        u16t averageTime;
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(309): warning:  #177-D: function "uctsk_SSNP_TBC_new" was declared but never referenced
+  static void uctsk_SSNP_TBC_new(void* pdata)
+..\USER\ucCos_App\uctsk_SSNP_TBC.c: 5 warnings, 0 errors
+compiling TBC.c...
+..\USER\ssnp\TBC.c(190): warning:  #177-D: variable "err" was declared but never referenced
+        err_t err;
+..\USER\ssnp\TBC.c(218): warning:  #177-D: variable "data" was declared but never referenced
+        u8t* data;
+..\USER\ssnp\TBC.c(221): warning:  #177-D: variable "err" was declared but never referenced
+        err_t err;
+..\USER\ssnp\TBC.c(342): warning:  #177-D: variable "buf" was declared but never referenced
+        struct netbuf* buf;
+..\USER\ssnp\TBC.c(343): warning:  #177-D: variable "con" was declared but never referenced
+        struct netconn* con;
+..\USER\ssnp\TBC.c(344): warning:  #177-D: variable "con1" was declared but never referenced
+        struct netconn* con1;
+..\USER\ssnp\TBC.c(345): warning:  #177-D: variable "con2" was declared but never referenced
+        struct netconn* con2;
+..\USER\ssnp\TBC.c(346): warning:  #177-D: variable "err" was declared but never referenced
+        err_t err;
+..\USER\ssnp\TBC.c(347): warning:  #177-D: variable "n" was declared but never referenced
+        u8t n;
+..\USER\ssnp\TBC.c(348): warning:  #177-D: variable "data" was declared but never referenced
+        u8t* data;
+..\USER\ssnp\TBC.c(349): warning:  #550-D: variable "isOk" was set but never used
+        u8t isOk;
+..\USER\ssnp\TBC.c(475): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\ssnp\TBC.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=29876 RO-data=1000 RW-data=276 ZI-data=55396  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 17 Warning(s).
+ variable "err" was set but never used
+        err_t err;
+..\USER\ssnp\TBIM.c(571): warning:  #550-D: variable "err" was set but never used
+        err_t err;
+..\USER\ssnp\TBIM.c(572): warning:  #550-D: variable "offset" was set but never used
+        u32t* offset;
+..\USER\ssnp\TBIM.c(573): warning:  #550-D: variable "max_block_size" was set but never used
+        u16t* max_block_size;
+..\USER\ssnp\TBIM.c(298): warning:  #177-D: function "send_cmd_reply" was declared but never referenced
+  static void send_cmd_reply(void* data,void*argument)
+..\USER\ssnp\TBIM.c(302): warning:  #177-D: function "sent_trigger_reply" was declared but never referenced
+  static void sent_trigger_reply(void* argument)
+..\USER\ssnp\TBIM.c: 7 warnings, 0 errors
+compiling timer.c...
+compiling tp.c...
+..\USER\ssnp\tp.c(11): warning:  #177-D: function "set_status_word_protocol_error" was declared but never referenced
+  static void set_status_word_protocol_error()
+..\USER\ssnp\tp.c: 1 warning, 0 errors
+compiling ssnp_for_app.c...
+compiling alias_map.c...
+compiling alias_state.c...
+compiling TBC.c...
+..\USER\ssnp\TBC.c(189): warning:  #177-D: variable "err" was declared but never referenced
+        err_t err;
+..\USER\ssnp\TBC.c(217): warning:  #177-D: variable "data" was declared but never referenced
+        u8t* data;
+..\USER\ssnp\TBC.c(220): warning:  #177-D: variable "err" was declared but never referenced
+        err_t err;
+..\USER\ssnp\TBC.c(341): warning:  #177-D: variable "buf" was declared but never referenced
+        struct netbuf* buf;
+..\USER\ssnp\TBC.c(342): warning:  #177-D: variable "con" was declared but never referenced
+        struct netconn* con;
+..\USER\ssnp\TBC.c(343): warning:  #177-D: variable "con1" was declared but never referenced
+        struct netconn* con1;
+..\USER\ssnp\TBC.c(344): warning:  #177-D: variable "con2" was declared but never referenced
+        struct netconn* con2;
+..\USER\ssnp\TBC.c(345): warning:  #177-D: variable "err" was declared but never referenced
+        err_t err;
+..\USER\ssnp\TBC.c(346): warning:  #177-D: variable "n" was declared but never referenced
+        u8t n;
+..\USER\ssnp\TBC.c(347): warning:  #177-D: variable "data" was declared but never referenced
+        u8t* data;
+..\USER\ssnp\TBC.c(348): warning:  #550-D: variable "isOk" was set but never used
+        u8t isOk;
+..\USER\ssnp\TBC.c(473): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\USER\ssnp\TBC.c: 12 warnings, 0 errors
+compiling sdp.c...
+..\USER\ssnp\sdp.c(65): warning:  #177-D: variable "netif" was declared but never referenced
+        struct netif* netif;
+..\USER\ssnp\sdp.c(541): warning:  #1-D: last line of file ends without a newline
+  }
+..\USER\ssnp\sdp.c(38): warning:  #177-D: function "checksum" was declared but never referenced
+  static u16t checksum(void* dataptr,u16t len)
+..\USER\ssnp\sdp.c(44): warning:  #177-D: function "dp_frag_output" was declared but never referenced
+  static err_t dp_frag_output(struct pbuf* p,struct sdp_addr* src,struct sdp_addr* dst,struct netif* netif)
+..\USER\ssnp\sdp.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=29808 RO-data=1000 RW-data=268 ZI-data=55388  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 38 Warning(s).
