@@ -7,3 +7,216 @@ C:\Users\tianmn\Desktop\transducer\TBC\MDK-ARM\Project.uvproj
 Project File Date:  12/25/2014
 
 <h2>Output:</h2>
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(57): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(173): error:  #169: expected a declaration
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(182): warning:  #12-D: parsing restarts here after previous syntax error
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(228): warning:  #550-D: variable "msg" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(229): warning:  #177-D: variable "n_send_dismsg" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(230): warning:  #550-D: variable "tbim_list" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(231): warning:  #550-D: variable "st" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(232): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(233): warning:  #177-D: variable "k" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(234): warning:  #177-D: variable "delay_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(235): warning:  #177-D: variable "time_f" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(236): warning:  #177-D: variable "time_n" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(237): warning:  #177-D: variable "time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(239): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(240): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(241): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(242): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(244): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(245): warning:  #177-D: variable "ret" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(246): warning:  #177-D: variable "item" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(248): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(250): warning:  #550-D: variable "test_time_index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(254): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(257): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(258): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(259): warning:  #177-D: variable "buf" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(44): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(74): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(107): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(120): warning:  #177-D: function "Delay" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(137): warning:  #177-D: function "TIM5_delay_us" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(143): warning:  #177-D: function "NVIC_Configuration_TIM5" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(188): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(202): warning:  #177-D: function "test" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(57): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(227): warning:  #550-D: variable "msg" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(228): warning:  #177-D: variable "n_send_dismsg" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(229): warning:  #550-D: variable "tbim_list" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(230): warning:  #550-D: variable "st" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(231): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(232): warning:  #177-D: variable "k" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(233): warning:  #177-D: variable "delay_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(234): warning:  #177-D: variable "time_f" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(235): warning:  #177-D: variable "time_n" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(236): warning:  #177-D: variable "time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(238): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(239): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(240): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(241): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(242): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(244): warning:  #177-D: variable "ret" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(245): warning:  #177-D: variable "item" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(247): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(249): warning:  #550-D: variable "test_time_index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(250): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(256): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(257): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(258): warning:  #177-D: variable "buf" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(44): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(74): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(107): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(120): warning:  #177-D: function "Delay" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(137): warning:  #177-D: function "TIM5_delay_us" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(143): warning:  #177-D: function "NVIC_Configuration_TIM5" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(187): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(201): warning:  #177-D: function "test" was declared but never referenced
+linking...
+Program Size: Code=25668 RO-data=860 RW-data=300 ZI-data=63660  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 37 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling ssnp_for_app.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ssnp\ssnp_for_app.c(423): error:  #20: identifier "recv" is undefined
+..\USER\ssnp\ssnp_for_app.c(409): warning:  #177-D: variable "recv_type" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling ssnp_for_app.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ssnp\ssnp_for_app.c(409): warning:  #177-D: variable "recv_type" was declared but never referenced
+linking...
+Program Size: Code=25660 RO-data=860 RW-data=308 ZI-data=64260  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling ssnp_for_app.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ssnp\ssnp_for_app.c(428): error:  #142: expression must have pointer-to-object type
+..\USER\ssnp\ssnp_for_app.c(410): warning:  #177-D: variable "recv_type" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling ssnp_for_app.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ssnp\ssnp_for_app.c(410): warning:  #177-D: variable "recv_type" was declared but never referenced
+linking...
+Program Size: Code=25824 RO-data=860 RW-data=308 ZI-data=64260  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling i2c_ee.c...
+compiling ssnp_for_app.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ssnp\ssnp_for_app.c(410): warning:  #177-D: variable "recv_type" was declared but never referenced
+linking...
+Program Size: Code=25824 RO-data=860 RW-data=308 ZI-data=64260  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 2 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(58): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(228): warning:  #550-D: variable "msg" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(229): warning:  #177-D: variable "n_send_dismsg" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(230): warning:  #550-D: variable "tbim_list" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(231): warning:  #550-D: variable "st" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(232): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(233): warning:  #177-D: variable "k" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(234): warning:  #177-D: variable "delay_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(235): warning:  #177-D: variable "time_f" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(236): warning:  #177-D: variable "time_n" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(237): warning:  #177-D: variable "time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(239): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(240): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(241): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(242): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(244): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(245): warning:  #177-D: variable "ret" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(246): warning:  #177-D: variable "item" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(248): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(250): warning:  #550-D: variable "test_time_index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(254): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(257): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(258): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(259): warning:  #177-D: variable "buf" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(45): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(75): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(108): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(121): warning:  #177-D: function "Delay" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(138): warning:  #177-D: function "TIM5_delay_us" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(144): warning:  #177-D: function "NVIC_Configuration_TIM5" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(188): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(202): warning:  #177-D: function "test" was declared but never referenced
+linking...
+Program Size: Code=25824 RO-data=860 RW-data=308 ZI-data=64260  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 37 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(10): error:  #5: cannot open source input file "i2c_ee.h": No such file or directory
+Target not created
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(57): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(227): warning:  #550-D: variable "msg" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(228): warning:  #177-D: variable "n_send_dismsg" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(229): warning:  #550-D: variable "tbim_list" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(230): warning:  #550-D: variable "st" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(231): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(232): warning:  #177-D: variable "k" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(233): warning:  #177-D: variable "delay_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(234): warning:  #177-D: variable "time_f" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(235): warning:  #177-D: variable "time_n" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(236): warning:  #177-D: variable "time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(238): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(239): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(240): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(241): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(242): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(244): warning:  #177-D: variable "ret" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(245): warning:  #177-D: variable "item" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(247): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(249): warning:  #550-D: variable "test_time_index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(250): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(256): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(257): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(258): warning:  #177-D: variable "buf" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(44): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(74): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(107): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(120): warning:  #177-D: function "Delay" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(137): warning:  #177-D: function "TIM5_delay_us" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(143): warning:  #177-D: function "NVIC_Configuration_TIM5" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(187): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(201): warning:  #177-D: function "test" was declared but never referenced
+linking...
+Program Size: Code=25824 RO-data=860 RW-data=308 ZI-data=64260  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 37 Warning(s).

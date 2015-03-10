@@ -170,8 +170,7 @@ static void app_init()
 	init_queue();
 }
 
----------------------------------------------------------------------------------------------------------
-*/
+
 
 
 /*
@@ -275,7 +274,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 	protocol_init();
 	printf("\r\n\r\n\r\nTBC init ok.\r\n");
 	app_init();
-	
+/*	
 	for(n_send_dismsg=0;n_send_dismsg<SEND_DISMSG_NUM;n_send_dismsg++)
 	{
 		send_discovery_msg();//这里能直接调用吗？因为内核和这里都使用了netif，会不会出错？但是这里应该是线程安全的，因为对于netif都是只读操作
@@ -331,10 +330,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 	st=SYN;
 	NVIC_Configuration_TIM5();
 	tbc_send_begin_of_epoch_msg();//发送开始标识
-	//printf("uctsk_SSNP():send begin of epoch msg done.\r\n");
-	//printf("uctsk_SSNP():TBC recving sensor data.\r\n");
-	// for(t_i=0;t_i<500;t_i++)
-	 //	test_time[t_i]=t_i;
+
 	for(;;)
 	{
 		for(;;)
@@ -403,19 +399,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 					{
 					//	mem_recv_time[index++]=	TIM_GetCounter(TIM5);
 						//printf("uctsk_SSNP_TBC_new():TBC recv streaming data %d from TBIM %d tdcn %d\r\n",*data,buf->alias,buf->tdcn_num);
-						/*
-						++recv_num;
-						++TBIM_recv[buf->alias];
-						if(TBIM_recv[buf->alias]==1000)
-						{
-							printf("get %d data from TBIM%d\r\n",TBIM_recv[buf->alias],buf->alias);
-							++cmdnum;
-							if(cmdnum==1)
-							{
-								printf("uctsk_SSNP():TBC recv sensor data done.\r\n");
-							//	break;
-							}
-						} */
+					
 						send_sdp_upcomputer(buf);
 						//data=(u32t*)buf->p->data;
 						//printf("TBIM%d,tdcn%d,data=",buf->alias,buf->tdcn_num);
@@ -432,12 +416,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 //						 printf("TBC send sleep cmd to TBIM%d tdcn%d.\r\n",(*upcomputer_cmd)>>4 & 0x000f,(*upcomputer_cmd) & 0x000f);
 //						 upcomputer_cmd=NULL;
 //					}
-				/*	if(get_up_cmd)
-					{
-						  TBC_send_noArgucmd(get_up_cmd_alias,get_up_cmd_tdcn,INITIALIZATION,SLEEP);
-						  printf("send\r\n");
-						  get_up_cmd=0;
-					}	*/
+			
 					if(!isQempty())
 					{
 						item=deQueue(&ret);
@@ -470,7 +449,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 					if((msg =(struct tbc_msg *)sys_arch_mbox_fetch_unblock(upcomputer_cmd_recv_mbox))!= NULL)
 					{
 						if(msg->type == TBC_MSG_UPPER)
-						{/* 这里假设TBC命令不需要回复，否则还需要接收回复消息，#未完成#：处理命令回复数据*/
+						{
 							TBC_send_noArguCmd_to_tbim(find_tbim(msg->msg.upper_msg.tbim_alias),msg->msg.upper_msg.tdcn_num,msg->msg.upper_msg.cmdclass,msg->msg.upper_msg.cmdfunc);
 						}
 						else
@@ -499,6 +478,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 		}
 		//这里可以OSTimeDly(1)吗？
 	}
+	*/
 }
 void TIM5_IRQHandler(void)
 {

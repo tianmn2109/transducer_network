@@ -400,18 +400,57 @@ void ETH_IRQHandler(void)
     OSIntExit();                                 /* Tell uC/OS-II that we are leaving the ISR          */    
 }
 extern sys_mbox_t upcomputer_cmd_recv_mbox;
+u16 recv_data;
 u16 temp_trx;
 extern int get_up_cmd;
 extern int get_up_cmd_alias;
 extern int get_up_cmd_tdcn;
 struct cmd_item item;
+static u16 recv_buf[300];    // 接收缓冲区，用户在中断中接收串口发送来的数据.
+static u16 recv_type = 0;
+static u16 buf_start = 0;
+static u16 buf_tail = 0;
+
 void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 {
-	 
+	// printf("recv:\r\n");
 	 if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)//判断 是否 接收中断  
 	 {
-	  temp_trx = USART_ReceiveData(USART2);
-	  //USART_SendData(USART2,temp_trx);
+	  USART_ClearITPendingBit(USART2,USART_IT_RXNE); //清楚中断标记，即中断复位
+
+	  recv_data = USART_ReceiveData(USART2);	 //接收数据
+	  printf("%c",recv_data&0xff);			 // 回显到超级终端上
+	  printf(" %d ",recv_data);			 // 回显到超级终端上
+	  recv_buf[buf_tail ++] = recv_data;
+	  printf("   buf_start = %d buf_tail = %d recv_buf[%d] = %d\r\n",buf_start, buf_tail, buf_tail-1, recv_buf[buf_tail-1]);
+
+	  if (buf_tail > 1 && buf_tail >= recv_buf[1])
+	  {
+	      buf_start = 0;
+		  buf_tail = 0;
+	      
+		  switch (recv_buf[0])
+		  {
+		      case 1:
+			          printf("write phy teds\r\n");
+			          break;
+			  case 2:
+			          printf("write meta teds\r\n");
+			          break;
+			  case 3:
+			          printf("write transducer channel teds\r\n");
+			          break;
+			  case 4:
+			          printf("execute cmd\r\n");
+			          break;
+			  default:
+			          printf("cannot recognize\r\n");
+			          break;
+		  }
+
+	  }
+
+/*	  temp_trx = USART_ReceiveData(USART2);
 	  printf("tbim%d,tdcn%d\r\n",temp_trx>>4&0x0f,temp_trx&0x0f);
 	  get_up_cmd=1;
 	  get_up_cmd_alias=	temp_trx>>4&0x0f;
@@ -421,9 +460,7 @@ void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 	  item.cmd_class=1;
 	  item.cmd_func=1;
 	  enQueue(item);
-	  //send_cmd(temp_trx>>4&0x0f,temp_trx&0x0f);
-//	  if(sys_mbox_trypost(upcomputer_cmd_recv_mbox,&temp_trx)!= ERR_OK)
-	  	//printf("err\r\n");
+*//**/	
 	  while(USART_GetFlagStatus(USART2,USART_FLAG_TXE) == RESET);//判断 发送标志 
 	 }
 }
