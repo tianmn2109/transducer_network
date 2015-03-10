@@ -1,0 +1,10 @@
+.\Obj\netbuf.o: ..\USER\ssnp\netbuf.c
+.\Obj\netbuf.o: ..\USER\ssnp\netbuf.h
+.\Obj\netbuf.o: ..\USER\ssnp\opt.h
+.\Obj\netbuf.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\Obj\netbuf.o: ..\USER\ssnp\ssnpopt.h
+.\Obj\netbuf.o: ..\USER\ssnp\config.h
+.\Obj\netbuf.o: ..\USER\ssnp\pbuf.h
+.\Obj\netbuf.o: ..\USER\ssnp\err.h
+.\Obj\netbuf.o: ..\USER\ssnp\memp.h
+.\Obj\netbuf.o: ..\USER\ssnp\memp_std.h

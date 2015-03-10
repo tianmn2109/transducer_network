@@ -1,0 +1,17 @@
+.\Obj\tp.o: ..\USER\ssnp\tp.c
+.\Obj\tp.o: ..\USER\ssnp\tp.h
+.\Obj\tp.o: ..\USER\ssnp\pbuf.h
+.\Obj\tp.o: ..\USER\ssnp\opt.h
+.\Obj\tp.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\Obj\tp.o: ..\USER\ssnp\ssnpopt.h
+.\Obj\tp.o: ..\USER\ssnp\config.h
+.\Obj\tp.o: ..\USER\ssnp\err.h
+.\Obj\tp.o: ..\USER\ssnp\netif.h
+.\Obj\tp.o: ..\USER\ssnp\ethbcp.h
+.\Obj\tp.o: ..\USER\ssnp\debug.h
+.\Obj\tp.o: ..\USER\ssnp\inet_chksum.h
+.\Obj\tp.o: ..\USER\ssnp\memp.h
+.\Obj\tp.o: ..\USER\ssnp\memp_std.h
+.\Obj\tp.o: ..\USER\ssnp\def.h
+.\Obj\tp.o: ..\USER\ssnp\cpu.h
+.\Obj\tp.o: C:\Keil\ARM\RV31\INC\string.h
