@@ -441,6 +441,16 @@
               <FileType>5</FileType>
               <FilePath>..\USER\ucCos_App\upcomputer.h</FilePath>
             </File>
+            <File>
+              <FileName>i2c_fram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\i2c_fram.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_fram.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\USER\i2c_fram.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -930,6 +940,11 @@
               <FileName>sdp.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\USER\ssnp\sdp.c</FilePath>
+            </File>
+            <File>
+              <FileName>teds_table.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\USER\ssnp\teds_table.h</FilePath>
             </File>
           </Files>
         </Group>

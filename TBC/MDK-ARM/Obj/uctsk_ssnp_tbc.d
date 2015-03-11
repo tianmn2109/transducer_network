@@ -53,3 +53,4 @@
 .\Obj\uctsk_ssnp_tbc.o: ..\USER\ssnp/TBC.h
 .\Obj\uctsk_ssnp_tbc.o: ..\USER\ucCos_App\upcomputer.h
 .\Obj\uctsk_ssnp_tbc.o: ..\USER\ucCos_App\commondefine.h
+.\Obj\uctsk_ssnp_tbc.o: ..\USER\i2c_fram.h

@@ -7,6 +7,8 @@
 #include "ssnp/debug.h"
 #include "ssnp/TBC.h"
 #include "upcomputer.h"
+
+#include "i2c_fram.h"
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
      set to 'Yes') calls __io_putchar() */
@@ -244,6 +246,11 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 	u8t ret;
 	struct cmd_item item;
   //-----------测试用变量。--------------------
+
+   //---------------用来测试EEPROM------------
+	uint8_t array[300];
+
+	//----------------------------------------
    u8t test_alias;
    
    u16t test_time_index;
@@ -263,18 +270,65 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 	aaaa=0;
 	index=0;
 	upcomputer_cmd=NULL;
+
+
 	
   //-----------测试用变量。--------------------
    test_time_index=0;
    is_test=0;
    cmdnum=0;
+
+  
    
   //-------------------------------	
 	hardware_init();
 	protocol_init();
 	printf("\r\n\r\n\r\nTBC init ok.\r\n");
 	app_init();
-/*	
+
+/*
+	printf("\r\nTest for writing and reading EEPROM\r\n");
+	ret = 0;
+    ret = I2C_FRAM_BufferRead(array, 0x0000, 300);
+	if (ret)
+	    printf("\r\nread success\r\n");
+	for (i = 0; i < 300; i ++)
+	{
+	    printf("array[%d] = %d\r\n",i,array[i]);
+	}
+
+	for (i = 0; i < 300; i ++)
+	{
+	    array[i] = i; 
+		printf("array[%d] = %d\r\n",i,array[i]);
+	}
+	printf("\r\narray[0] = %d\r\n",array[0]);
+	printf("\r\narray[99] = %d\r\n",array[99]);
+
+	ret = 0;
+    ret = I2C_FRAM_BufferWrite(array,0x0000, 300);
+//	I2C_BufferWrite(array,0x0000, 300);
+	if (ret) 
+	    printf("\r\nwrite sucess\r\n");
+	printf("\r\nwrite doner\n");
+	for (i = 0; i < 300; i ++)
+	{
+	    array[i] = 0;
+	}
+
+    printf("\r\narray[0] = %d\r\n",array[0]);
+	printf("\r\narray[19] = %d\r\n",array[99]);
+
+	ret = 0;
+    ret = I2C_FRAM_BufferRead(array, 0x0000, 300);
+	if (ret)
+	    printf("\r\nread success\r\n");
+	for (i = 0; i < 300; i ++)
+	{
+	    printf("array[%d] = %d\r\n",i,array[i]);
+	}
+*/
+	
 	for(n_send_dismsg=0;n_send_dismsg<SEND_DISMSG_NUM;n_send_dismsg++)
 	{
 		send_discovery_msg();//这里能直接调用吗？因为内核和这里都使用了netif，会不会出错？但是这里应该是线程安全的，因为对于netif都是只读操作
@@ -478,7 +532,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 		}
 		//这里可以OSTimeDly(1)吗？
 	}
-	*/
+	
 }
 void TIM5_IRQHandler(void)
 {

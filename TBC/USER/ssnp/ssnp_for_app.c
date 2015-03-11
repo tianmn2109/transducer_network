@@ -1,6 +1,8 @@
 #include "ssnp_for_app.h"
 #include "upcomputer.h"
 #include <includes.h>
+#include "teds_table.h"
+ #include "i2c_fram.h"
 
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
@@ -280,6 +282,12 @@ static void ethernet_initialize(void)
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+  // 配置用于读写EEPROM 
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_OD;
+  GPIO_Init(GPIOB, &GPIO_InitStructure); /**/
       
   /* Configure PC3 as input */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
@@ -410,6 +418,59 @@ static u16 recv_buf[300];    // 接收缓冲区，用户在中断中接收串口发送来的数据.
 static u16 recv_type = 0;
 static u16 buf_start = 0;
 static u16 buf_tail = 0;
+// 读写TEDS
+#define META_ADDR  0x0000
+// 向EEPROM中写meta TEDS
+void writeMetaTeds(u16 *recv_buf)
+{
+    
+    uint8_t array[300];
+	u16 i = 0;
+	int ret = 0;
+	printf("\r\nTest for writing Meta EEPROM\r\n");
+	for (i = 0; i < recv_buf[1] - 2; i ++) 
+	{
+	    array[i] = (u8)recv_buf[i + 2];
+		printf("array[%d] = %d\r\n",i,array[i]);
+	}
+	I2C_BufferWrite(array, 0x0000, recv_buf[1]);
+/**/
+ /*   int i = 0;
+	int ret = 0;
+	uint8_t array[300];
+    for (i = 0; i < 300; i ++)
+	{
+	    array[i] = i + 50; 
+		printf("array[%d] = %d\r\n",i,array[i]);
+	}
+
+	ret = 0;
+   // ret = I2C_FRAM_BufferWrite(array,0x0000, 20);
+	I2C_BufferWrite(array,0x0000, 300);
+
+	printf("\r\nwrite doner\n");
+	for (i = 0; i < 300; i ++)
+	{
+	    array[i] = 0;
+	}
+
+    printf("\r\narray[0] = %d\r\n",array[0]);
+	printf("\r\narray[19] = %d\r\n",array[99]);
+//	printf("\r\narray[253] = %d\r\n",array[253]);
+//	printf("\r\narray[255] = %d\r\n",array[255]);
+	ret = 0;
+ */   
+    ret = I2C_FRAM_BufferRead(array, 0x0000, 300);
+	if (ret)
+	    printf("\r\nread success\r\n");
+	for (i = 0; i < 300; i ++)
+	{
+	    printf("array[%d] = %d\r\n",i,array[i]);
+	}
+/*	*/
+}
+
+
 
 void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 {
@@ -423,7 +484,7 @@ void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 	  printf(" %d ",recv_data);			 // 回显到超级终端上
 	  recv_buf[buf_tail ++] = recv_data;
 	  printf("   buf_start = %d buf_tail = %d recv_buf[%d] = %d\r\n",buf_start, buf_tail, buf_tail-1, recv_buf[buf_tail-1]);
-
+	  
 	  if (buf_tail > 1 && buf_tail >= recv_buf[1])
 	  {
 	      buf_start = 0;
@@ -433,6 +494,7 @@ void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 		  {
 		      case 1:
 			          printf("write phy teds\r\n");
+				
 			          break;
 			  case 2:
 			          printf("write meta teds\r\n");
@@ -445,6 +507,9 @@ void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 			          break;
 			  default:
 			          printf("cannot recognize\r\n");
+				
+					  writeMetaTeds(recv_buf);
+			
 			          break;
 		  }
 

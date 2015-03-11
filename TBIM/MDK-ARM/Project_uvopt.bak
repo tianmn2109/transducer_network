@@ -1447,10 +1447,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>27</ColumnNumber>
+      <ColumnNumber>2</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>643</TopLine>
-      <CurrentLine>663</CurrentLine>
+      <CurrentLine>664</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\USER\ssnp\TBIM.c</PathWithFileName>
       <FilenameWithoutPath>TBIM.c</FilenameWithoutPath>
@@ -1559,9 +1559,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>68</ColumnNumber>
+      <ColumnNumber>66</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>35</TopLine>
+      <TopLine>21</TopLine>
       <CurrentLine>59</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\USER\ssnp\TBIMDriver.c</PathWithFileName>
@@ -1637,8 +1637,34 @@
 
   <AlienFiles>
     <PathWithFilename>E:\me\传感器网络实验\毕业论文试验\AAAA完整最终演示\TBIM\USER\ssnp\TBIM.h</PathWithFilename>
-    <TopLine>22</TopLine>
+    <TopLine>23</TopLine>
     <CurrentLine>46</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
+    <PathWithFilename>E:\me\传感器网络实验\毕业论文试验\AAAA完整最终演示\TBIM\USER\ssnp\TEDS.h</PathWithFilename>
+    <TopLine>85</TopLine>
+    <CurrentLine>110</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1676,20 +1702,20 @@
         </Doc>
         <Doc>
           <Name>..\USER\ssnp\TBIM.c</Name>
-          <ColumnNumber>27</ColumnNumber>
+          <ColumnNumber>2</ColumnNumber>
           <TopLine>643</TopLine>
-          <CurrentLine>663</CurrentLine>
+          <CurrentLine>664</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\USER\ssnp\TBIMDriver.c</Name>
-          <ColumnNumber>68</ColumnNumber>
-          <TopLine>35</TopLine>
+          <ColumnNumber>66</ColumnNumber>
+          <TopLine>21</TopLine>
           <CurrentLine>59</CurrentLine>
         </Doc>
         <Doc>
           <Name>..\USER\ssnp/TBIM.h</Name>
           <ColumnNumber>28</ColumnNumber>
-          <TopLine>22</TopLine>
+          <TopLine>23</TopLine>
           <CurrentLine>46</CurrentLine>
         </Doc>
         <Doc>
@@ -1715,6 +1741,12 @@
           <ColumnNumber>12</ColumnNumber>
           <TopLine>1</TopLine>
           <CurrentLine>2</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>..\USER\ssnp\TEDS.h</Name>
+          <ColumnNumber>67</ColumnNumber>
+          <TopLine>85</TopLine>
+          <CurrentLine>110</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

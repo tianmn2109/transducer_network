@@ -51,3 +51,5 @@
 .\Obj\ssnp_for_app.o: ..\USER\ssnp\timer.h
 .\Obj\ssnp_for_app.o: ..\USER\ucCos_App\upcomputer.h
 .\Obj\ssnp_for_app.o: ..\USER\ucCos_App\commondefine.h
+.\Obj\ssnp_for_app.o: ..\USER\ssnp\teds_table.h
+.\Obj\ssnp_for_app.o: ..\USER\i2c_fram.h
