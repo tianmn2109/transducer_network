@@ -441,10 +441,11 @@ ARM Macro Assembler    Page 7
               00000000 
               00000000 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\Obj\os
-_cpu_a.d -o.\Obj\os_cpu_a.o -IC:\Keil\ARM\INC -IC:\Keil\ARM\INC\ST\STM32F10x --
-predefine="__MICROLIB SETA 1" --list=.\List\os_cpu_a.lst ..\USER\uCOS-II\Ports\
-ARM-Cortex-M3\RealView\os_cpu_a.asm
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\os
+_cpu_a.d -o.\obj\os_cpu_a.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\PACK\ARM\CMSIS
+\3.20.3\CMSIS\Include -IC:\Keil\ARM\Inc\ST\STM32F10x --predefine="__MICROLIB SE
+TA 1" --list=.\list\os_cpu_a.lst ..\USER\uCOS-II\Ports\ARM-Cortex-M3\RealView\o
+s_cpu_a.asm
 
 
 
@@ -695,4 +696,4 @@ asm
 .asm
 Comment: OSTaskSwHook used once
 8 symbols
-347 symbols in table
+354 symbols in table

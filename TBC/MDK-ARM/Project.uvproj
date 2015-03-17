@@ -160,7 +160,7 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4098</DriverSelection>
+            <DriverSelection>4099</DriverSelection>
           </Flash1>
           <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
@@ -331,7 +331,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
+            <Optim>4</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -945,6 +945,11 @@
               <FileName>teds_table.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\USER\ssnp\teds_table.h</FilePath>
+            </File>
+            <File>
+              <FileName>teds_table.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\USER\ssnp\teds_table.c</FilePath>
             </File>
           </Files>
         </Group>

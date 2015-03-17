@@ -3,10 +3,12 @@
 #include <includes.h>
 #include <math.h>
 #include "ssnp/ssnp_for_app.h"
+
 #include "ssnp/ssnp.h"
 #include "ssnp/debug.h"
 #include "ssnp/TBC.h"
 #include "upcomputer.h"
+#include "ssnp/teds.h"
 
 #include "i2c_fram.h"
 #ifdef __GNUC__
@@ -224,14 +226,23 @@ void send_cmd(u8t alias,u8t tdcn)
 int get_up_cmd;
 u8t get_up_cmd_alias;
 u8t get_up_cmd_tdcn;
+extern  u16 buf_tail;
+typedef union BL
+{
+    char ch[4];
+	int i;
+} BL;
+BL b;
 static void uctsk_SSNP_TBC_new(void* pdata)
 {
 	struct tbc_msg *msg;
 	u8t n_send_dismsg;
 	void* tbim_list;
 	state st;
-	u8t i;
-	u8t k;
+	int i;
+	int j;
+	int k;
+	
 	u16t delay_time[20];
 	u16t time_f;
 	u16t time_n;
@@ -248,7 +259,7 @@ static void uctsk_SSNP_TBC_new(void* pdata)
   //-----------测试用变量。--------------------
 
    //---------------用来测试EEPROM------------
-	uint8_t array[300];
+	uint8_t array[200];
 
 	//----------------------------------------
    u8t test_alias;
@@ -286,18 +297,32 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 	printf("\r\n\r\n\r\nTBC init ok.\r\n");
 	app_init();
 
-/*
+
 	printf("\r\nTest for writing and reading EEPROM\r\n");
-	ret = 0;
-    ret = I2C_FRAM_BufferRead(array, 0x0000, 300);
+
+
+
+	startWork();
+/*	while (1) 
+	{
+	      if(buf_tail > 5)
+		      printf("hello world\r\n");
+	      for (i = 0; i < 65500; i ++)
+		      for (j = 0; j < 650; j ++);
+			  //    for (k = 0; k < 6788; k ++);
+	  printf("buf_tail = %d\r\n",buf_tail);
+	}
+*/
+/*	ret = 0;
+    ret = I2C_FRAM_BufferRead(array, 40, 40);
 	if (ret)
 	    printf("\r\nread success\r\n");
-	for (i = 0; i < 300; i ++)
+	for (i = 0; i < 40; i ++)
 	{
 	    printf("array[%d] = %d\r\n",i,array[i]);
 	}
-
-	for (i = 0; i < 300; i ++)
+  */
+/*	for (i = 0; i < 300; i ++)
 	{
 	    array[i] = i; 
 		printf("array[%d] = %d\r\n",i,array[i]);
@@ -328,7 +353,8 @@ static void uctsk_SSNP_TBC_new(void* pdata)
 	    printf("array[%d] = %d\r\n",i,array[i]);
 	}
 */
-	
+//	writeTedsTableTest();
+//    write_test();
 	for(n_send_dismsg=0;n_send_dismsg<SEND_DISMSG_NUM;n_send_dismsg++)
 	{
 		send_discovery_msg();//这里能直接调用吗？因为内核和这里都使用了netif，会不会出错？但是这里应该是线程安全的，因为对于netif都是只读操作

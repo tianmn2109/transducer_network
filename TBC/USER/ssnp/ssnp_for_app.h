@@ -3,11 +3,16 @@
 #include "ethernetif.h"
 #include "init.h"
 #include "ssnp.h"
+
 void protocol_init(void);
 void hardware_init(void);
 
+// 不同EDS的地址
+#define PHY_ADDR  (0x0000 + 18)
+#define META_ADDR (0x0000 + 18 + 17)
+#define TRANSDUCER_CHANNEL_ADDR   (0x0000 + 18 + 17 + 35)  
 
-
+static u16 buf_tail = 0;
 /*
 --------------------------------------------------------------------------------------------------
 																	TBC应用程序需要使用的接口

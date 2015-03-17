@@ -83,7 +83,7 @@ static void USART_Configuration(void)
   GPIO_InitTypeDef GPIO_InitStructure;
   USART_InitTypeDef USART_InitStructure; 
 
-  RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOD | RCC_APB2Periph_AFIO ,ENABLE);
+  RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOD | RCC_APB2Periph_AFIO,ENABLE);
 
   RCC_APB1PeriphClockCmd( RCC_APB1Periph_USART2 ,ENABLE);
 
@@ -301,6 +301,11 @@ static void ethernet_initialize(void)
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
   GPIO_Init(GPIOD, &GPIO_InitStructure); /**/
       
+  //控制灯的开关
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+  GPIO_Init(GPIOD, &GPIO_InitStructure); 
   /* MCO pin configuration------------------------------------------------- */
   /* Configure MCO (PA8) as alternate function push-pull */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
@@ -414,139 +419,75 @@ extern int get_up_cmd;
 extern int get_up_cmd_alias;
 extern int get_up_cmd_tdcn;
 struct cmd_item item;
-static u16 recv_buf[300];    // 接收缓冲区，用户在中断中接收串口发送来的数据.
-static u16 recv_type = 0;
+#define RECV_BUF_SIZE 300
+#define RECV_TEDS_SIZE 147
+char recv_teds[RECV_TEDS_SIZE];
+static u16 recv_buf[RECV_BUF_SIZE];    // 接收缓冲区，用户在中断中接收串口发送来的数据.
 static u16 buf_start = 0;
-static u16 buf_tail = 0;
+static u16 buf_tail;
 // 读写TEDS
-#define META_ADDR  0x0000
+// 不同EDS的地址
+
 // 向EEPROM中写meta TEDS
-void writeMetaTeds(u16 *recv_buf)
+
+
+u8 isRecvFinish = 0;
+u16 recv_len = 0;
+u8 i = 0;
+//此处在接收字符串的时候不能输出
+
+void writeTEDS()
 {
-    
-    uint8_t array[300];
-	u16 i = 0;
-	int ret = 0;
-	printf("\r\nTest for writing Meta EEPROM\r\n");
-	for (i = 0; i < recv_buf[1] - 2; i ++) 
-	{
-	    array[i] = (u8)recv_buf[i + 2];
-		printf("array[%d] = %d\r\n",i,array[i]);
-	}
-	I2C_BufferWrite(array, 0x0000, recv_buf[1]);
-/**/
- /*   int i = 0;
-	int ret = 0;
-	uint8_t array[300];
-    for (i = 0; i < 300; i ++)
-	{
-	    array[i] = i + 50; 
-		printf("array[%d] = %d\r\n",i,array[i]);
-	}
+    initTedsTable();
+	writeTedsTable();
+	writeTeds(recv_teds);   //write TEDS
+	readTedsTable();
+	readTeds();
 
-	ret = 0;
-   // ret = I2C_FRAM_BufferWrite(array,0x0000, 20);
-	I2C_BufferWrite(array,0x0000, 300);
-
-	printf("\r\nwrite doner\n");
-	for (i = 0; i < 300; i ++)
-	{
-	    array[i] = 0;
-	}
-
-    printf("\r\narray[0] = %d\r\n",array[0]);
-	printf("\r\narray[19] = %d\r\n",array[99]);
-//	printf("\r\narray[253] = %d\r\n",array[253]);
-//	printf("\r\narray[255] = %d\r\n",array[255]);
-	ret = 0;
- */   
-    ret = I2C_FRAM_BufferRead(array, 0x0000, 300);
-	if (ret)
-	    printf("\r\nread success\r\n");
-	for (i = 0; i < 300; i ++)
-	{
-	    printf("array[%d] = %d\r\n",i,array[i]);
-	}
-/*	*/
 }
-
-
 
 void USART2_IRQHandler(void)       //串口接收中断，并将接收到得数据发送出
 {
-	// printf("recv:\r\n");
 	 if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)//判断 是否 接收中断  
 	 {
 	  USART_ClearITPendingBit(USART2,USART_IT_RXNE); //清楚中断标记，即中断复位
-
 	  recv_data = USART_ReceiveData(USART2);	 //接收数据
-	  printf("%c",recv_data&0xff);			 // 回显到超级终端上
-	  printf(" %d ",recv_data);			 // 回显到超级终端上
 	  recv_buf[buf_tail ++] = recv_data;
-	  printf("   buf_start = %d buf_tail = %d recv_buf[%d] = %d\r\n",buf_start, buf_tail, buf_tail-1, recv_buf[buf_tail-1]);
-	  
-	  if (buf_tail > 1 && buf_tail >= recv_buf[1])
-	  {
-	      buf_start = 0;
-		  buf_tail = 0;
-	      
-		  switch (recv_buf[0])
-		  {
-		      case 1:
-			          printf("write phy teds\r\n");
-				
-			          break;
-			  case 2:
-			          printf("write meta teds\r\n");
-			          break;
-			  case 3:
-			          printf("write transducer channel teds\r\n");
-			          break;
-			  case 4:
-			          printf("execute cmd\r\n");
-			          break;
-			  default:
-			          printf("cannot recognize\r\n");
-				
-					  writeMetaTeds(recv_buf);
-			
-			          break;
-		  }
+	  buf_tail = buf_tail % RECV_BUF_SIZE;
+     }
+	 if (recv_buf[buf_tail - 1] == 0x5a)
+	     buf_start = buf_tail - 1;
 
-	  }
-
-/*	  temp_trx = USART_ReceiveData(USART2);
-	  printf("tbim%d,tdcn%d\r\n",temp_trx>>4&0x0f,temp_trx&0x0f);
-	  get_up_cmd=1;
-	  get_up_cmd_alias=	temp_trx>>4&0x0f;
-	  get_up_cmd_tdcn= temp_trx&0x0f;
-	  item.alias= get_up_cmd_alias;
-	  item.tdcn= get_up_cmd_tdcn;
-	  item.cmd_class=1;
-	  item.cmd_func=1;
-	  enQueue(item);
-*//**/	
-	  while(USART_GetFlagStatus(USART2,USART_FLAG_TXE) == RESET);//判断 发送标志 
+	 if ((recv_buf[buf_start] == 0x5a) && (recv_buf[buf_tail - 1] == 0xa5))
+	 {
+	     recv_len = buf_tail - buf_start;
+		 isRecvFinish = 1;
 	 }
+
+	 if(USART_GetITStatus(USART2, USART_FLAG_ORE) == SET)
+	 {
+	     USART_ClearFlag(USART2, USART_FLAG_ORE);
+		 USART_ReceiveData(USART2);
+	 }
+	 if (isRecvFinish)
+	 {
+	    // for (i = 0; i < recv_len; i ++)
+		  //   USART_SendData(USART2,recv_buf[i]);
+		 for (i = 0; i < recv_len - 2; i ++)
+		     recv_teds[i] = (char)recv_buf[i + 1];
+		 printf("receve finished\r\n");
+	   /*  for (i = 0; i < recv_len - 2; i ++)
+		     printf("%d ", recv_teds[i]);
+			 printf("\r\n");
+	    */ writeTEDS();
+		 buf_start = 0;
+		 buf_tail = 0;
+		 isRecvFinish = 0;
+	 }
+     
+
 }
 
-///**
-//  * @brief  Retargets the C library printf function to the USART.
-//  * @param  None
-//  * @retval None
-//  */
-//PUTCHAR_PROTOTYPE
-//{
-//  /* Place your implementation of fputc here */
-//  /* e.g. write a character to the USART */
-//  USART_SendData(USART2, (uint8_t) ch);
-//
-//  /* Loop until the end of transmission */
-//  while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET)
-//  {}
-//
-//  return ch;
-//}
 
 /*********************************************************************************************************
       END FILE

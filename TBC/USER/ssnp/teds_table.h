@@ -1,5 +1,16 @@
+
+
 #ifndef TEDS_TABLE_H
 #define TEDS_TABLE_H
+
+#include <includes.h>
+
+#include "ssnp_for_app.h"
+ #include "i2c_fram.h"
+
+#define PHY_TEDS_SIZE 19
+#define META_TEDS_SIZE 35
+#define TS_TEDS_SIZE 93
 
 #pragma pack(1)
 
@@ -141,4 +152,37 @@ typedef struct Transducerchannel_TEDS {
     unsigned short checksum;
 }Transducerchannel_TEDS;
 #pragma pack()
+
+#define TEDS_TABLE_ADDR 0x00
+#define TEDS_ENTRY_SIZE 4
+#pragma pack(1)
+typedef struct teds_entry 				 //存储TEDS的表项结构体定义
+{
+    u8 type;
+	u8 valid;
+	u8 addr;
+	u8 len;
+} teds_entry;
+#pragma pack()
+extern struct Meta_TEDS metaTeds;
+extern struct Phy_TEDS phyTeds;
+extern struct Transducerchannel_TEDS tsTeds[8];
+#define TEDS_TABLE_SIZE 10				  // 可以存储TEDS的数量 共10个 1个phy teds	一个meta teds  和8个 transducer channel teds
+extern teds_entry tedsTable[];   //存储	teds 的表项数组
+
+void writeTedsEntry(struct teds_entry * entry, u8 addr);
+
+void writeTedsTable(void); 
+
+void initTedsTable(void);
+
+void readTedsTable(void);
+
+void readTeds(void);
+
+void writeTeds(u8 * array);
+
+void startWork(void);
+
+
 #endif // TEDS_TABLE_H

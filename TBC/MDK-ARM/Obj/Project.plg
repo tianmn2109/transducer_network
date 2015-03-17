@@ -3,28 +3,378 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-E:\tianmn\devel\t\transducer\TBC\MDK-ARM\Project.uvproj
-Project File Date:  03/10/2015
+E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\Project.uvproj
+Project File Date:  03/16/2015
 
 <h2>Output:</h2>
 Build target 'ZFWL_V1.0'
-compiling i2c_fram.c...
-..\USER\i2c_fram.c(30): error:  #65: expected a ";"
-..\USER\i2c_fram.c(37): warning:  #12-D: parsing restarts here after previous syntax error
-..\USER\i2c_fram.c(28): warning:  #177-D: variable "i" was declared but never referenced
-..\USER\i2c_fram.c(29): warning:  #177-D: variable "j" was declared but never referenced
-Target not created
-Load "E:\\tianmn\\devel\\t\\transducer\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
-_____^
-*** error 56: cant open file
-Build target 'ZFWL_V1.0'
-compiling i2c_fram.c...
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
 linking...
-Program Size: Code=36048 RO-data=860 RW-data=308 ZI-data=64260  
+Program Size: Code=29484 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 3 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling ssnp_for_app.c...
+..\USER\ssnp\ssnp_for_app.c(443): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+linking...
+Program Size: Code=27656 RO-data=744 RW-data=296 ZI-data=64240  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 1 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling ssnp_for_app.c...
+..\USER\ssnp\ssnp_for_app.c(443): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(83): error:  #20: identifier "i" is undefined
+..\USER\ssnp\teds_table.c(84): error:  #20: identifier "arr" is undefined
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(84): error:  #20: identifier "arr" is undefined
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29540 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 3 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29536 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 4 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29644 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 3 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29444 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 3 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29444 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 4 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29536 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 3 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29604 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 4 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+..\USER\ssnp\teds_table.c - 0 Error(s), 4 Warning(s).
+Build target 'ZFWL_V1.0'
+linking...
+Program Size: Code=29604 RO-data=744 RW-data=300 ZI-data=65076  
 FromELF: creating hex file...
 ".\Obj\Project.axf" - 0 Error(s), 0 Warning(s).
-Load "E:\\tianmn\\devel\\t\\transducer\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
-Set JLink Project File to "E:\tianmn\devel\t\transducer\TBC\MDK-ARM\JLinkSettings.ini"
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -56,15 +406,17 @@ Erase Done.
 Programming Done.
 Verify OK.
 Build target 'ZFWL_V1.0'
-compiling ssnp_for_app.c...
-..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
-..\USER\ssnp\ssnp_for_app.c(418): warning:  #177-D: variable "recv_type" was declared but never referenced
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
 linking...
-Program Size: Code=35872 RO-data=860 RW-data=308 ZI-data=64260  
+Program Size: Code=29532 RO-data=744 RW-data=300 ZI-data=65076  
 FromELF: creating hex file...
-".\Obj\Project.axf" - 0 Error(s), 2 Warning(s).
-Load "E:\\tianmn\\devel\\t\\transducer\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
-Set JLink Project File to "E:\tianmn\devel\t\transducer\TBC\MDK-ARM\JLinkSettings.ini"
+".\Obj\Project.axf" - 0 Error(s), 4 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
  
 JLink info:
 ------------
@@ -96,37 +448,582 @@ Erase Done.
 Programming Done.
 Verify OK.
 Build target 'ZFWL_V1.0'
-compiling ssnp_for_app.c...
-..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
-..\USER\ssnp\ssnp_for_app.c(461): error:  #20: identifier "ret" is undefined
-..\USER\ssnp\ssnp_for_app.c(468): error:  #7: unrecognized token
-..\USER\ssnp\ssnp_for_app.c(468): error:  #29: expected an expression
-..\USER\ssnp\ssnp_for_app.c(468): error:  #7: unrecognized token
-..\USER\ssnp\ssnp_for_app.c(469): error:  #65: expected a ";"
-..\USER\ssnp\ssnp_for_app.c(418): warning:  #177-D: variable "recv_type" was declared but never referenced
-Target not created
-Build target 'ZFWL_V1.0'
-compiling ssnp_for_app.c...
-..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
-..\USER\ssnp\ssnp_for_app.c(461): error:  #20: identifier "ret" is undefined
-..\USER\ssnp\ssnp_for_app.c(418): warning:  #177-D: variable "recv_type" was declared but never referenced
-Target not created
-Build target 'ZFWL_V1.0'
-compiling ssnp_for_app.c...
-..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
-..\USER\ssnp\ssnp_for_app.c(461): error:  #268: declaration may not appear after executable statement in block
-..\USER\ssnp\ssnp_for_app.c(418): warning:  #177-D: variable "recv_type" was declared but never referenced
-Target not created
-Build target 'ZFWL_V1.0'
-compiling ssnp_for_app.c...
-..\USER\ucCos_App\upcomputer.h(38): warning:  #1-D: last line of file ends without a newline
-..\USER\ssnp\ssnp_for_app.c(418): warning:  #177-D: variable "recv_type" was declared but never referenced
+compiling i2c_fram.c...
 linking...
-Program Size: Code=35816 RO-data=860 RW-data=308 ZI-data=64260  
+Program Size: Code=29532 RO-data=744 RW-data=300 ZI-data=65076  
 FromELF: creating hex file...
-".\Obj\Project.axf" - 0 Error(s), 2 Warning(s).
-Load "E:\\tianmn\\devel\\t\\transducer\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
-Set JLink Project File to "E:\tianmn\devel\t\transducer\TBC\MDK-ARM\JLinkSettings.ini"
+".\Obj\Project.axf" - 0 Error(s), 0 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(164): error:  #127: expected a statement
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(201): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29484 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 4 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling i2c_fram.c...
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(200): error:  #136: struct "Transducerchannel_TEDS" has no field "ts"
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(205): warning:  #177-D: variable "light" was declared but never referenced
+Target not created
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(205): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29288 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 7 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(65): warning:  #550-D: variable "test" was set but never used
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(170): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8t *"
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(205): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29156 RO-data=744 RW-data=300 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 8 Warning(s).
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(61): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(305): warning:  #223-D: function "startWork" declared implicitly
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(434): warning:  #111-D: statement is unreachable
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(460): warning:  #111-D: statement is unreachable
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(508): warning:  #128-D: loop is not reachable from preceding code
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(246): warning:  #550-D: variable "delay_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(254): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(255): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(256): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(262): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(265): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(268): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(269): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(270): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(271): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(274): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(275): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(48): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(78): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(111): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(191): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(205): warning:  #177-D: function "test" was declared but never referenced
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(65): warning:  #550-D: variable "test" was set but never used
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(205): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29088 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 33 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(65): warning:  #550-D: variable "test" was set but never used
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(205): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29112 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 7 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling main.c...
+compiling stm32f10x_it.c...
+Project build/rebuild aborted.
+Target not created
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(65): warning:  #550-D: variable "test" was set but never used
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(205): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29108 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 7 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(65): warning:  #550-D: variable "test" was set but never used
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(206): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29212 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 7 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(61): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(434): warning:  #111-D: statement is unreachable
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(460): warning:  #111-D: statement is unreachable
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(508): warning:  #128-D: loop is not reachable from preceding code
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(246): warning:  #550-D: variable "delay_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(254): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(255): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(256): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(262): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(265): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(268): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(269): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(270): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(271): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(274): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(275): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(48): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(78): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(111): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(191): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(205): warning:  #177-D: function "test" was declared but never referenced
+linking...
+Program Size: Code=29012 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 25 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling uctsk_SSNP_TBC.c...
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(61): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(305): warning:  #223-D: function "startWork" declared implicitly
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(434): warning:  #111-D: statement is unreachable
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(460): warning:  #111-D: statement is unreachable
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(508): warning:  #128-D: loop is not reachable from preceding code
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(243): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(246): warning:  #550-D: variable "delay_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(251): warning:  #550-D: variable "aaaa" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(252): warning:  #177-D: variable "bbbb" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(253): warning:  #550-D: variable "syn_total_time" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(254): warning:  #177-D: variable "mem_recv_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(255): warning:  #550-D: variable "index" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(256): warning:  #177-D: variable "m" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(262): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(265): warning:  #177-D: variable "test_alias" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(268): warning:  #177-D: variable "t_i" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(269): warning:  #550-D: variable "is_test" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(270): warning:  #550-D: variable "cmdnum" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(271): warning:  #550-D: variable "upcomputer_cmd" was set but never used
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(274): warning:  #177-D: variable "averageTime" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(275): warning:  #177-D: variable "data" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(48): warning:  #177-D: function "average_time" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(78): warning:  #177-D: function "avertime_new" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(111): warning:  #177-D: function "uctsk_SSNP_TBC" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(191): warning:  #177-D: function "test_analysis" was declared but never referenced
+..\USER\ucCos_App\uctsk_SSNP_TBC.c(205): warning:  #177-D: function "test" was declared but never referenced
+linking...
+Program Size: Code=29212 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 26 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.20p, compiled Nov 19 2010 15:55:07
+Firmware: J-Link ARM V8 compiled Nov 19 2010 11:55:23
+Hardware: V8.00
+S/N : 270676280 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F107VC
+VTarget = 3.261V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          0
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'ZFWL_V1.0'
+compiling teds_table.c...
+..\USER\ssnp\teds_table.c(11): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(65): warning:  #550-D: variable "test" was set but never used
+..\USER\ssnp\teds_table.c(78): warning:  #177-D: variable "i" was declared but never referenced
+..\USER\ssnp\teds_table.c(79): warning:  #177-D: variable "arr" was declared but never referenced
+..\USER\ssnp\teds_table.c(124): warning:  #177-D: variable "j" was declared but never referenced
+..\USER\ssnp\teds_table.c(125): warning:  #177-D: variable "array" was declared but never referenced
+..\USER\ssnp\teds_table.c(206): warning:  #177-D: variable "light" was declared but never referenced
+linking...
+Program Size: Code=29172 RO-data=744 RW-data=292 ZI-data=65076  
+FromELF: creating hex file...
+".\Obj\Project.axf" - 0 Error(s), 7 Warning(s).
+Load "E:\\tianmn\\transducer_network\\transducer_network\\transducer_network\\TBC\\MDK-ARM\\Obj\\Project.AXF" 
+Set JLink Project File to "E:\tianmn\transducer_network\transducer_network\transducer_network\TBC\MDK-ARM\JLinkSettings.ini"
  
 JLink info:
 ------------

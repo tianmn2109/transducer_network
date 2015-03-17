@@ -448,10 +448,10 @@ ARM Macro Assembler    Page 7
   311 00000220         
   312 00000220         
   313 00000220                 END
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\Obj\li
-b_mem_a.d -o.\Obj\lib_mem_a.o -IC:\Keil\ARM\INC -IC:\Keil\ARM\INC\ST\STM32F10x 
---predefine="__MICROLIB SETA 1" --list=.\List\lib_mem_a.lst ..\USER\uC-LIB\Port
-s\RealView\lib_mem_a.asm
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\li
+b_mem_a.d -o.\obj\lib_mem_a.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\PACK\ARM\CMS
+IS\3.20.3\CMSIS\Include -IC:\Keil\ARM\Inc\ST\STM32F10x --predefine="__MICROLIB 
+SETA 1" --list=.\list\lib_mem_a.lst ..\USER\uC-LIB\Ports\RealView\lib_mem_a.asm
 
 
 
@@ -626,4 +626,4 @@ Symbol: Pre_Copy_2
       At line 170 in file ..\USER\uC-LIB\Ports\RealView\lib_mem_a.asm
 
 18 symbols
-342 symbols in table
+349 symbols in table

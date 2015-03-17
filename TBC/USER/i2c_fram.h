@@ -6,7 +6,7 @@
 #include "stm32f10x.h"
 
 u8t I2C_FRAM_BufferWrite(u8t* pBuffer, u16t WriteAddr, u16t NumByteToWrite);
-u8t I2C_FRAM_BufferRead(u8t* pBuffer, u16t ReadAddr, u16t NumByteToRead);
+u8t I2C_FRAM_BufferRead(u8t* pBuffer, u8t ReadAddr, u16t NumByteToRead);
 void I2C_BufferWrite(uint8_t* pBuffer, uint8_t WriteAddr, uint16_t NumByteToWrite);
 
 #endif /* __I2C_FRAM_H */

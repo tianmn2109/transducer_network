@@ -199,7 +199,7 @@ static err_t get_TBIM_struct(struct tbim *t)
 	u8t* data;
 	u8t isOk;
 	struct netbuf* buf;
-	err_t err;
+
 	
 	isOk=0;
 //	SSNP_DEBUG_PRINT("get_TBIM_struct():sending tbim struct msg .\r\n");
@@ -231,10 +231,9 @@ static err_t get_TBIM_struct(struct tbim *t)
 static err_t get_TBIM_meta_TEDS(struct tbim *t)
 {
 	u8t n;
-	u8t* data;
+
 	u8t isOk;
 	struct netbuf* buf;
-	err_t err;
 	u8t* iset;
 	u32t* offset;
 	u16t* max_block_size;
@@ -363,16 +362,11 @@ static err_t get_TBIM_tdcn_TEDS(struct tbim *t)
 static err_t create_TBIM(u8t uid,u8t alias)
 {	
 	struct tbim *t;
-	struct netbuf* buf;
-	struct netconn* con;
-	struct netconn* con1;
-	struct netconn* con2;
-	err_t err;
-	u8t n;
-	u8t* data;
-	u8t isOk;
+
+
+
 	printf("create_TBIM():create tbim %d.\r\n",alias);
-	isOk=0;
+	
 //	printf("create_TBIM():first postion is %d.\r\n",tbc.first_free);
 	t=&tbc.tbim_table[tbc.first_free++];
 	

@@ -295,10 +295,10 @@ ARM Macro Assembler    Page 5
                        *************************************************
   196 0000002A         
   197 0000002A                 END
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\Obj\cp
-u_a.d -o.\Obj\cpu_a.o -IC:\Keil\ARM\INC -IC:\Keil\ARM\INC\ST\STM32F10x --predef
-ine="__MICROLIB SETA 1" --list=.\List\cpu_a.lst ..\USER\uC-CPU\ARM-Cortex-M3\Re
-alView\cpu_a.asm
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\obj\cp
+u_a.d -o.\obj\cpu_a.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\PACK\ARM\CMSIS\3.20.
+3\CMSIS\Include -IC:\Keil\ARM\Inc\ST\STM32F10x --predefine="__MICROLIB SETA 1" 
+--list=.\list\cpu_a.lst ..\USER\uC-CPU\ARM-Cortex-M3\RealView\cpu_a.asm
 
 
 
@@ -384,4 +384,4 @@ Symbol: CPU_WaitForInt
       At line 52 in file ..\USER\uC-CPU\ARM-Cortex-M3\RealView\cpu_a.asm
 Comment: CPU_WaitForInt used once
 9 symbols
-333 symbols in table
+340 symbols in table

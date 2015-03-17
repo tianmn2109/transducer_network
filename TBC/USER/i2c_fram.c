@@ -1,4 +1,4 @@
-																												  #include "i2c_fram.h"
+#include "i2c_fram.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -26,11 +26,11 @@ vu8 FRAM_ADDRESS;
 void I2C_delay(void)
 {
 u16t i=500; //这里可以优化速度 ，经测试最低到5还能写入
-u16t j = 20;
+u16t j = 1;
 while(i) 
 { 
 i--; 
-j = 20;
+j = 5;
 while (j)
     j --;
 } 
@@ -183,13 +183,13 @@ return 1;
 
 
 //读出1串数据 
-u8t I2C_FRAM_BufferRead(u8t* pBuffer, u16t WriteAddr, u16t NumByteToRead)
+u8t I2C_FRAM_BufferRead(u8t* pBuffer, u8t WriteAddr, u16t NumByteToRead)
 {
 u8t Addr = 0, count = 0;
 
-Addr = WriteAddr / I2C_PageSize;
+Addr = 0; //WriteAddr / I2C_PageSize;
 
-count = WriteAddr % I2C_PageSize;
+count = WriteAddr; // % I2C_PageSize;
 
 Addr = Addr << 1;
 
